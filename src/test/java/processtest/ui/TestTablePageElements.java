@@ -23,8 +23,8 @@ public class TestTablePageElements extends Base {
 
     @Test
     public void searchTableElements() {
-        rowByCode("353", "id").shouldHave(text("3"));
-        rowByCode("353", "status").shouldHave(text("failed"));
+        rowByCode(CODE, ID).shouldHave(text(EXPECTED_ID));
+        rowByCode(CODE, STATUS).shouldHave(text(EXPECTED_STATUS));
     }
 
 
@@ -33,4 +33,9 @@ public class TestTablePageElements extends Base {
 
     /*Constants for test data*/
     private static final String URL = "file:///C:/Users/ngrunin/IdeaProjects/Prozesstest/src/main/resources/table.html";
+    private static final String CODE = "353";
+    private static final String ID = "id";
+    private static final String STATUS = "status";
+    private static final String EXPECTED_ID = "3";
+    private static final String EXPECTED_STATUS = "failed";
 }
